@@ -759,7 +759,7 @@ class Trainer:
             import resource  # pylint: disable=import-outside-toplevel
 
             rlimit = resource.getrlimit(resource.RLIMIT_NOFILE)
-            resource.setrlimit(resource.RLIMIT_NOFILE, (4096, rlimit[1]))
+            # resource.setrlimit(resource.RLIMIT_NOFILE, (4096, rlimit[1]))
 
         # set and initialize Pytorch runtime
         use_cuda, num_gpus = setup_torch_training_env(
